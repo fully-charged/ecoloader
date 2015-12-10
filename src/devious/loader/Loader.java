@@ -25,6 +25,7 @@ public class Loader extends JFrame {
 
         add(new JLabel(Res.BANNER, JLabel.CENTER), BorderLayout.NORTH);
         add(center, BorderLayout.CENTER);
+        setIconImage(Res.ICON.getImage());
     }
 
     public static void main(String[] args) {

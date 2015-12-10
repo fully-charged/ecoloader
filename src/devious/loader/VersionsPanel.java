@@ -29,11 +29,11 @@ public class VersionsPanel extends JPanel implements ActionListener {
 
     private final JButton refreshButton;
 
-    private final JComboBox<String> nameBox;
-    private final DefaultComboBoxModel<String> nameModel;
+    private final JComboBox nameBox;
+    private final DefaultComboBoxModel nameModel;
 
-    private final JComboBox<String> versionBox;
-    private final DefaultComboBoxModel<String> versionModel;
+    private final JComboBox versionBox;
+    private final DefaultComboBoxModel versionModel;
 
     private final JButton playButton;
 
@@ -50,10 +50,10 @@ public class VersionsPanel extends JPanel implements ActionListener {
         refreshButton = new JButton(Res.REFRESH_16);
         refreshButton.addActionListener(this);
 
-        nameModel = new DefaultComboBoxModel<String>();
+        nameModel = new DefaultComboBoxModel();
         nameModel.addElement("--- No Names ---");
 
-        nameBox = new JComboBox<String>(nameModel);
+        nameBox = new JComboBox(nameModel);
         nameBox.setEnabled(false);
         nameBox.addItemListener(new ItemListener() {
             @Override
@@ -90,10 +90,10 @@ public class VersionsPanel extends JPanel implements ActionListener {
         namePanel.add(nameLabel, BorderLayout.WEST);
         namePanel.add(nameBox, BorderLayout.CENTER);
 
-        versionModel = new DefaultComboBoxModel<String>();
+        versionModel = new DefaultComboBoxModel();
         versionModel.addElement("--- No Versions ---");
 
-        versionBox = new JComboBox<String>(versionModel);
+        versionBox = new JComboBox(versionModel);
         versionBox.setEnabled(false);
 
         final JLabel versionLabel = new JLabel("Version:", JLabel.RIGHT);
