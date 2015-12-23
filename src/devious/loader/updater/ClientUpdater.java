@@ -14,7 +14,7 @@ import java.util.regex.Pattern;
 
 public final class ClientUpdater {
 
-    public static final String REMOTE_ROOT_PATH = "http://ecocache.arteropk.com/";
+    public static final String REMOTE_ROOT_PATH = "http://cache.deviousps.com/";
     public static final String REMOTE_CLIENTS_PATH = REMOTE_ROOT_PATH + "clients.txt";
 
     public static final File CACHE_DIR = new File(System.getProperty("user.home"), "Devious");
